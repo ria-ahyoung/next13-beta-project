@@ -1,6 +1,12 @@
-import { DynamicRoutingProps } from "./type";
+import { notFound } from "next/navigation";
+
+import type { DynamicRoutingProps } from "./types";
 
 export default async function DynamicRouting({ params }: DynamicRoutingProps) {
+  if (params.dynamic === "nothing") {
+    // 의도적으로 호출할 경우 폴더와 가장 가까운 not-found 페이지가 표시됩니다.
+    notFound();
+  }
   return (
     <main>
       <h2>
