@@ -1,4 +1,6 @@
 import Link from "next/link";
+import "./globals.css";
+import style from "./layout.module.css";
 
 import type { Metadata } from "next";
 
@@ -27,13 +29,13 @@ export default function RootLayout({ children }: RootLayout) {
   return (
     <html lang="en">
       <body>
-        <header>
+        <header className={style.header}>
           <h1>Next 13 Practice Project</h1>
           <nav>
             <Link href="/routing">Routing</Link>
           </nav>
         </header>
-        {children}
+        <main className={style.childrenWrapper}>{children}</main>
       </body>
     </html>
   );

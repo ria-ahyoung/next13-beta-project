@@ -1,0 +1,12 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1.5rem;
+  border-bottom: 1px solid grey;
+}
+
+.childrenWrapper {
+  display: flex;
+  padding: 0.8rem 1.5rem;
+}

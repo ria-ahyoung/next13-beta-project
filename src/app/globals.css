@@ -1,0 +1,35 @@
+html {
+  box-sizing: border-box;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  color: whitesmoke;
+  background: black;
+}
+
+a {
+  padding: 0 0.3em;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.5s;
+  color: gray;
+}
+
+a:hover {
+  color: white;
+}
+
+em {
+  padding: 0.2rem 0.4rem;
+  font-weight: bold;
+  font-style: normal;
+  color: black;
+  background-color: #d3d3d3;
+  border-radius: 0.3rem;
+}
+
+mark {
+  padding: 0 0.3rem;
+  color: black;
+  background: #fff892;
+}
