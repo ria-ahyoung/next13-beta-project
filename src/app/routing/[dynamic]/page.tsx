@@ -2,6 +2,14 @@ import { notFound } from "next/navigation";
 
 import type { DynamicRoutingProps } from "./types";
 
+// 페이지 별로 dynamic metadata 생성할 수 있습니다.
+export function generateMetadata({ params }: DynamicRoutingProps) {
+  return {
+    title: `페이지 경로 : ${params.dynamic}`,
+    description: `다이나믹 라우팅 동작에 의한 ${params.dynamic} 경로의 페이지입니다.`,
+  };
+}
+
 export default async function DynamicRouting({ params }: DynamicRoutingProps) {
   if (params.dynamic === "nothing") {
     // 의도적으로 호출할 경우 폴더와 가장 가까운 not-found 페이지가 표시됩니다.
